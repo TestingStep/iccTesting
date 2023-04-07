@@ -1,5 +1,6 @@
 package com.vodafone.v2x.roadusersimulator.app.usecases;
 
+import com.vodafone.v2x.roadusersimulator.app.AppProperties;
 import com.vodafone.v2x.roadusersimulator.denm.DENMManager;
 import com.vodafone.v2x.roadusersimulator.mqtt.Gateway;
 import com.vodafone.v2x.roadusersimulator.mqtt.MQTTConfig;
@@ -26,6 +27,11 @@ public class StadiumUsecase {
     private static String AllianzRivieraStadium_SW = "spv0esh";
 
 
+    public static void main(String[] args) {
+        start();
+    }
+
+
     public static void start() {
         logger.info("HighDensityOfPedestrian is starting");
 
@@ -40,7 +46,7 @@ public class StadiumUsecase {
         DENMManager denmManager = DENMManager.getInstance();
         denmManager.start(stepInstance);
 
-        int numberOfPedestrianPerGroup=20;
+        int numberOfPedestrianPerGroup=30;
 
         RoadUsersGroup rug1 = new RoadUsersGroup("pedestrian1", gw, AllianzRivieraStadium_Center, numberOfPedestrianPerGroup, RoadUserType.PEDESTRIAN, true);
         rug1.build();

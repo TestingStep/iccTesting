@@ -1,6 +1,5 @@
 package com.vodafone.v2x.roadusersimulator.app.usecases;
 
-import com.vodafone.v2x.roadusersimulator.app.AppProperties;
 import com.vodafone.v2x.roadusersimulator.denm.DENMManager;
 import com.vodafone.v2x.roadusersimulator.mqtt.Gateway;
 import com.vodafone.v2x.roadusersimulator.mqtt.MQTTConfig;
@@ -46,7 +45,7 @@ public class StadiumUsecase {
         DENMManager denmManager = DENMManager.getInstance();
         denmManager.start(stepInstance);
 
-        int numberOfPedestrianPerGroup=30;
+        int numberOfPedestrianPerGroup = 30;
 
         RoadUsersGroup rug1 = new RoadUsersGroup("pedestrian1", gw, AllianzRivieraStadium_Center, numberOfPedestrianPerGroup, RoadUserType.PEDESTRIAN, true);
         rug1.build();
@@ -58,10 +57,10 @@ public class StadiumUsecase {
         rug2.setAnimation(true);
 
         // Trigger DENM1
-        denmManager.triggerDENM(DENMType.ADVERSE_WEATHER_CONDITION_ADHESION,43.705731f,7.189140f,3600,500);
+        denmManager.triggerDENM(DENMType.ADVERSE_WEATHER_CONDITION_ADHESION, 43.705731f, 7.189140f, 3600, 500);
 
         // Trigger DENM2
-        denmManager.triggerDENM(DENMType.ACCIDENT,43.709980f,7.197994f,3600,500);
+        denmManager.triggerDENM(DENMType.ACCIDENT, 43.709980f, 7.197994f, 3600, 500);
 
 
     }

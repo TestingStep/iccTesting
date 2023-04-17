@@ -1,14 +1,14 @@
 package com.vodafone.v2x.roadusersimulator.app.usecases;
 
 
-import com.vodafone.v2x.roadusersimulator.denm.DENMManager;
-import com.vodafone.v2x.roadusersimulator.mqtt.Gateway;
-import com.vodafone.v2x.roadusersimulator.mqtt.MQTTConfig;
-import com.vodafone.v2x.roadusersimulator.roaduser.RoadUserType;
-import com.vodafone.v2x.roadusersimulator.roaduser.RoadUsersGroup;
-import com.vodafone.v2x.sdk.android.facade.enums.DENMType;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+        import com.vodafone.v2x.roadusersimulator.denm.DENMManager;
+        import com.vodafone.v2x.roadusersimulator.mqtt.Gateway;
+        import com.vodafone.v2x.roadusersimulator.mqtt.MQTTConfig;
+        import com.vodafone.v2x.roadusersimulator.roaduser.RoadUserType;
+        import com.vodafone.v2x.roadusersimulator.roaduser.RoadUsersGroup;
+        import com.vodafone.v2x.sdk.android.facade.enums.DENMType;
+        import org.apache.logging.log4j.LogManager;
+        import org.apache.logging.log4j.Logger;
 
 public class TemplateUsecase {
     private final static MQTTConfig V2XBrokerConfig = new MQTTConfig("v2x-gw.ovh", "hiveuser7", "Test123456789", 8883);

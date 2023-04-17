@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Appenders>
+        <Console name="ConsoleAppender" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%-5level] %-25c{1} %m%n" />
+            <ThresholdFilter level="DEBUG" onMatch="ACCEPT" onMismatch="DENY"/>
+        </Console>
+<!--        <File name="FileAppender" fileName="application-${date:yyyyMMdd}.log" immediateFlush="true" append="true">-->
+<!--            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%-5level] %-25c{1} %m%n" />-->
+<!--            <ThresholdFilter level="WARN" onMatch="ACCEPT" onMismatch="DENY"/>-->
+<!--        </File>-->
+    </Appenders>
+    <Loggers>
+        <Logger name="com.vodafone.v2x.roadusersimulator" level="info" additivity="true">
+            <AppenderRef ref="ConsoleAppender"/>
+<!--            <AppenderRef ref="FileAppender"/>-->
+        </Logger>
+        <Root level="error">
+        </Root>
+    </Loggers>
+</Configuration>
